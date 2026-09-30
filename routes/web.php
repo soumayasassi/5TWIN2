@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdvisorController ;
 
+Route::resource('products', ProductController::class);
 
 Route::get('/article', [ArticleController::class, 'index'])->name('article');
 Route::get('/advisor', [AdvisorController::class, 'show'])->name('advisor')
